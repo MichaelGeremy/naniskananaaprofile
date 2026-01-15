@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanis Kanana Gitari | ESG & Sustainability Leader</title>
+    <meta name="description"
+        content="Environmental, Social and Occupational Safety Leader with 10+ years experience. Founder of Sustainability Pulse Africa.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --deep-space: #0f172a;
+            --midnight-blue: #1a2847;
+            --navy-accent: #1e3a5f;
+            --emerald: #2a9e8a;
+            --emerald-light: #3dbda8;
+            --emerald-glow: rgba(42, 158, 138, 0.4);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --gold: #d4af37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--deep-space);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Floating Background Orbs */
+        .bg-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--emerald-glow) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+            animation: float-orb-1 20s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(30, 58, 95, 0.6) 0%, transparent 70%);
+            bottom: -150px;
+            left: -100px;
+            animation: float-orb-2 25s ease-in-out infinite;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float-orb-3 18s ease-in-out infinite;
+        }
+
+        @keyframes float-orb-1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(-50px, 80px) rotate(120deg);
+            }
+
+            66% {
+                transform: translate(30px, -40px) rotate(240deg);
+            }
+        }
+
+        @keyframes float-orb-2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(60px, -60px) rotate(180deg);
+            }
+        }
+
+        @keyframes float-orb-3 {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Floating Card Animation */
+        @keyframes levitate {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 30px var(--emerald-glow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+
+            50% {
+                box-shadow: 0 0 50px var(--emerald-glow), 0 0 80px rgba(42, 158, 138, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        /* Header Card - Levitating */
+        .profile-header {
+            background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--deep-space) 50%, var(--navy-accent) 100%);
+            border-radius: 24px;
+            padding: 60px;
+            margin-bottom: 40px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            animation: levitate 6s ease-in-out infinite, glow-pulse 4s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--emerald), var(--gold), var(--emerald));
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile-image-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 260px;
+            border-radius: 16px;
+            object-fit: cover;
+            object-position: top center;
+            border: 4px solid var(--emerald);
+            box-shadow: 0 0 40px var(--emerald-glow);
+            animation: levitate 5s ease-in-out infinite 0.5s;
+        }
+
+        .profile-image-ring {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px dashed var(--emerald-light);
+            border-radius: 20px;
+            animation: spin 20s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--emerald-light), var(--gold), var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            animation: fade-in-up 0.8s ease-out;
+        }
+
+        .title-role {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fade-in-up 0.8s ease-out 0.1s backwards;
+        }
+
+        .founder-badge {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 20px var(--emerald-glow);
+            animation: fade-in-up 0.8s ease-out 0.2s backwards;
+            transition: all 0.3s ease;
+        }
+
+        .founder-badge:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px var(--emerald-glow);
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            animation: fade-in-up 0.8s ease-out 0.3s backwards;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--emerald-light);
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Fade In Animation */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Credentials Bar */
+        .credentials-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 25px;
+            background: var(--glass-bg);
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+            animation: fade-in-up 0.8s ease-out 0.4s backwards;
+        }
+
+        .credential-tag {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, rgba(42, 158, 138, 0.2), rgba(42, 158, 138, 0.1));
+            border: 1px solid var(--emerald);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--emerald-light);
+            transition: all 0.3s ease;
+        }
+
+        .credential-tag:hover {
+            background: var(--emerald);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px var(--emerald-glow);
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: linear-gradient(145deg, var(--midnight-blue), var(--deep-space));
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: fade-in-up 0.8s ease-out backwards;
+        }
+
+        .section-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .section-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .section-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .section-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .section-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .section-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-8px) translateX(4px);
+            box-shadow: 0 20px 60px rgba(42, 158, 138, 0.15), 0 0 40px rgba(42, 158, 138, 0.1);
+            border-color: var(--emerald);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-primary);
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--emerald), transparent);
+            margin-left: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Summary Section */
+        .summary-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+        }
+
+        .summary-text strong {
+            color: var(--emerald-light);
+        }
+
+        /* Award Highlight */
+        .award-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            margin: 20px 0;
+            animation: glow-gold 3s ease-in-out infinite;
+        }
+
+        @keyframes glow-gold {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+            }
+        }
+
+        .award-highlight span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Experience Timeline */
+        .experience-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
+            border-left: 2px solid var(--emerald);
+        }
+
+        .experience-item::before {
+            content: '◆';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            color: var(--emerald);
+            font-size: 1rem;
+            background: var(--deep-space);
+            padding: 5px 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .exp-role {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--emerald-light);
+        }
+
+        .exp-company {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+
+        .exp-date {
+            background: linear-gradient(135deg, var(--navy-accent), var(--midnight-blue));
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border: 1px solid var(--glass-border);
+        }
+
+        .exp-roles-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .exp-roles-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .exp-roles-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--emerald);
+        }
+
+        .achievements-box {
+            background: linear-gradient(135deg, rgba(42, 158, 138, 0.1), rgba(42, 158, 138, 0.05));
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            border-left: 3px solid var(--emerald);
+        }
+
+        .achievements-title {
+            font-weight: 600;
+            color: var(--emerald-light);
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .achievements-list {
+            list-style: none;
+        }
+
+        .achievements-list li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .achievements-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* Education & Certifications Grid */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .edu-card {
+            background: linear-gradient(145deg, var(--glass-bg), transparent);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .edu-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--emerald);
+            box-shadow: 0 15px 40px rgba(42, 158, 138, 0.15);
+        }
+
+        .edu-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--emerald-light);
+            margin-bottom: 8px;
+        }
+
+        .edu-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .edu-card .edu-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--glass-bg);
+            border-radius: 10px;
+        }
+
+        /* Certifications List */
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px;
+            background: var(--glass-bg);
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: translateX(8px);
+            border-color: var(--emerald);
+            background: linear-gradient(135deg, rgba(42, 158, 138, 0.1), transparent);
+        }
+
+        .cert-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .cert-details h5 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .cert-details p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Affiliations */
+        .affiliations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .affiliation-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: var(--glass-bg);
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .affiliation-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--emerald);
+        }
+
+        .affiliation-item::before {
+            content: '◆';
+            color: var(--emerald);
+        }
+
+        .affiliation-item span {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Expertise Areas */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .expertise-tag {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, var(--navy-accent), var(--midnight-blue));
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .expertise-tag:hover {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+            color: white;
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 10px 30px var(--emerald-glow);
+        }
+
+        /* Footer */
+        .profile-footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--emerald-light);
+            margin-bottom: 15px;
+        }
+
+        /* Print Styles */
+        @media print {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            body {
+                background: white;
+                color: #1a1a1a;
+            }
+
+            .bg-orbs {
+                display: none;
+            }
+
+            .profile-header,
+            .section-card {
+                background: #f8f9fa !important;
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+                break-inside: avoid;
+            }
+
+            .logo-text {
+                -webkit-text-fill-color: #2a9e8a;
+                color: #2a9e8a;
+            }
+
+            .section-title,
+            .exp-role,
+            .edu-card h4 {
+                color: #2a9e8a !important;
+            }
+
+            .experience-item {
+                border-left-color: #2a9e8a;
+            }
+
+            .credential-tag,
+            .cert-item,
+            .affiliation-item,
+            .expertise-tag {
+                background: #f0f0f0 !important;
+                border: 1px solid #ddd !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-header {
+                padding: 40px 25px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-text {
+                font-size: 2.4rem;
+            }
+
+            .contact-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section-card {
+                padding: 30px 20px;
+            }
+
+            .exp-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Profile Header Card - Levitating -->
+        <header class="profile-header">
+            <div class="header-content">
+                <div class="profile-image-container">
+                    <div class="profile-image-ring"></div>
+                    <img src="profile_photo.png" alt="Nanis Kanana Gitari" class="profile-image"
+                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a2847%22 width=%22200%22 height=%22200%22/><text fill=%22%232a9e8a%22 font-family=%22Arial%22 font-size=%2260%22 x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22>NK</text></svg>'">
+                </div>
+                <div class="header-text">
+                    <h1 class="logo-text">NANIS KANANA GITARI</h1>
+                    <p class="title-role">ESG & Sustainability Leader</p>
+                    <div class="founder-badge">🌿 Founder, Sustainability Pulse Africa (SPAL)</div>
+
+                    <div class="contact-bar">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>kananananis@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+254 717 116 325</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Credentials Bar -->
+        <div class="credentials-bar">
+            <span class="credential-tag">MSc Occupational Safety & Health</span>
+            <span class="credential-tag">BSc Environmental Science</span>
+            <span class="credential-tag">GRI Sustainability Reporting</span>
+            <span class="credential-tag">Corporate ESG</span>
+            <span class="credential-tag">Carbon Accounting</span>
+            <span class="credential-tag">NEBOSH IGC</span>
+            <span class="credential-tag">ISO 9001:2015</span>
+            <span class="credential-tag">FSSC 22000</span>
+            <span class="credential-tag">NEMA Expert: 11426</span>
+        </div>
+
+        <!-- Executive Summary -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">✨</span>
+                Executive Summary
+            </h2>
+            <p class="summary-text">
+                Nanis Kanana is an environmental, social and occupational safety leader with 10 years' experience across
+                diverse sectors including construction, manufacturing, energy, and logistics. She is the founder of
+                <strong>Sustainability Pulse Africa (SPAL)</strong>, a company providing comprehensive OSH solutions,
+                environmental impact studies & audits, sustainability reporting, carbon emissions accounting, resource
+                efficiency, and E&S due diligence services, alongside the provision of impact reporting digital
+                platforms.
+            </p>
+            <p class="summary-text" style="margin-top: 15px;">
+                Nanis is passionate about helping organizations ensure safety and sustainability of their operations.
+                She is award winner of <strong>SOWSHEA Africa sustainability leadership award</strong>. She has worked
+                with companies across East, West and Central Africa to ensure integration of social and environmental
+                considerations in management systems and decision making. Some of the organizations include <strong>Sun
+                    King (Africa & Asia), PowerGen Renewable energy, Harj construction limited, D.M Bchanga construction
+                    limited, EMI Africa, UK Institution of Occupational Safety & Health, EiSqr Asia</strong>.
+            </p>
+            <p class="summary-text" style="margin-top: 15px;">
+                She holds a Masters in Occupational Safety & Health and a Bachelors in Environmental Science from
+                Kenyatta University. She is certified in carbon accounting for renewable energy projects, Sustainability
+                Global Reporting Initiative, NEBOSH IGC, and ISO 9001:2015 internal auditing. Nanis area of expertise is
+                environmental and social due diligence, audits, trainings, carbon accounting, occupational safety and
+                health management and sustainability reporting. In addition, she has experience driving strategic
+                relationships and collaborations with key stakeholders. Nanis is the <strong>East Africa IOSH
+                    consultant</strong> she drives strategic government and organizational partnerships to improve OSH
+                in the landscape.
+            </p>
+            <p class="summary-text" style="margin-top: 15px;">
+                She is an <strong>Executive Committee Member of Workplace Safety Professional association of
+                    Kenya</strong>. The largest safety professional association spearheading high standard safety
+                management performance within the country. She is also the <strong>country representative for Africa
+                    Safety Award for Excellence (AfriSAFE)</strong> and an associate member of the National
+                Environmental and Coordination Authority (NEMA). She is also a member of GHG Institute and
+                Sustainability Champions Network.
+            </p>
+        </section>
+
+        <!-- Areas of Expertise -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">◆</span>
+                Areas of Expertise
+            </h2>
+            <div class="expertise-grid">
+                <div class="expertise-tag">Environmental & Social Due Diligence</div>
+                <div class="expertise-tag">ESG Reporting & Strategy</div>
+                <div class="expertise-tag">Carbon Emissions Accounting</div>
+                <div class="expertise-tag">Occupational Safety Management</div>
+                <div class="expertise-tag">Sustainability Consulting</div>
+                <div class="expertise-tag">Environmental Impact Assessments</div>
+                <div class="expertise-tag">Compliance Management</div>
+                <div class="expertise-tag">Stakeholder Engagement</div>
+                <div class="expertise-tag">ISO Management Systems</div>
+                <div class="expertise-tag">HSE Training & Development</div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">💼</span>
+                Professional Experience
+            </h2>
+
+            <!-- PowerGen - Current Role -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Group HSES & Compliance Manager / Impact Reporting</h3>
+                        <p class="exp-company">PowerGen Renewable Energy</p>
+                    </div>
+                    <span class="exp-date">Jan 2025 - Present</span>
+                </div>
+                <ul class="exp-roles-list">
+                    <li>Lead HSES & compliance due diligence for all C&I clients across markets before contract closure
+                    </li>
+                    <li>Update and align environmental and social policies with investors' Environmental and Social
+                        Action Plans (ESAP)</li>
+                    <li>Provide transparent and timely HSES reporting to internal and external stakeholders</li>
+                    <li>Manage group impact reporting to investors and external ESG stakeholder relations</li>
+                    <li>Lead ESIA/ESMP studies and integrate E&S into early-stage development and constructability
+                        checks</li>
+                    <li>Build a generative safety culture and lead company compliance initiatives</li>
+                </ul>
+            </div>
+
+            <!-- PowerGen - Previous Role -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Group HSES Manager</h3>
+                        <p class="exp-company">PowerGen Renewable Energy</p>
+                    </div>
+                    <span class="exp-date">Jan 2023 - Dec 2024</span>
+                </div>
+                <ul class="exp-roles-list">
+                    <li>Developed and led the company's sustainability strategy encompassing ESG initiatives</li>
+                    <li>E&S screening of projects and participation in investment committee approvals</li>
+                    <li>Prepared insightful and transparent group development impact reports</li>
+                    <li>Conducted environmental and social due diligence of all vendors</li>
+                </ul>
+                <div class="achievements-box">
+                    <p class="achievements-title">Key Achievements</p>
+                    <ul class="achievements-list">
+                        <li>Successfully integrated ESG screening in investment committee project approvals</li>
+                        <li>Spearheaded development of annual social sustainability report focusing on impact and
+                            community safety</li>
+                        <li>Championed female inclusion in stakeholder engagements and community awareness programs</li>
+                        <li>Established annual stakeholder platform to discuss trends and recognize safety champions
+                        </li>
+                        <li>Earned promotion to head the group compliance committee</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Origen Fresh -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Head of ESG & Compliance</h3>
+                        <p class="exp-company">Origen Fresh EPZ</p>
+                    </div>
+                    <span class="exp-date">Dec 2021 - Dec 2022</span>
+                </div>
+                <ul class="exp-roles-list">
+                    <li>Developed and reviewed ESMS, emergency response plans, and OSH policies</li>
+                    <li>Mainstreamed ESG across business operations through KPI integration</li>
+                    <li>Coordinated environment and social initiatives ensuring regulatory compliance</li>
+                    <li>Supported FSSC 22000 food safety certification process</li>
+                </ul>
+                <div class="achievements-box">
+                    <p class="achievements-title">Key Achievements</p>
+                    <ul class="achievements-list">
+                        <li>Spearheaded establishment of standard operating procedures across all business functions
+                        </li>
+                        <li>Established ESG reporting dashboard and functional ESG committees</li>
+                        <li>Organization acquired 10+ licenses/certifications within six months</li>
+                        <li>Conducted first company fire drill and established emergency response plan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Q-sourcing / BAT -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Environmental Health & Safety Supervisor</h3>
+                        <p class="exp-company">Q-sourcing Servtec Kenya (British American Tobacco)</p>
+                    </div>
+                    <span class="exp-date">Jan 2020 - Sept 2021</span>
+                </div>
+                <ul class="exp-roles-list">
+                    <li>Developed HSE policies per OSHA 2007 and ISO 45001, ISO 14001 & ISO 9001 standards</li>
+                    <li>Managed warehouse safety, driver journey management, and transport safety planning</li>
+                    <li>Led incident investigations and emergency response procedures</li>
+                </ul>
+                <div class="achievements-box">
+                    <p class="achievements-title">Key Achievements</p>
+                    <ul class="achievements-list">
+                        <li>Initiated automated cleaning redesign of production chamber, eliminating manual safety
+                            hazards</li>
+                        <li>Introduced LOTOTO safety practice for loading/offloading operations</li>
+                        <li>Spearheaded ISO 9001 management system implementation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ezeetec -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Environmental Health & Safety Supervisor</h3>
+                        <p class="exp-company">Ezeetec Electrical Engineering Limited</p>
+                    </div>
+                    <span class="exp-date">Nov 2017 - Dec 2019</span>
+                </div>
+                <ul class="exp-roles-list">
+                    <li>Developed and implemented EHS policies per OSHA 2007 and regulations</li>
+                    <li>Conducted workplace inspections, risk assessments, and employee trainings</li>
+                    <li>Managed legal register compliance and incident investigations</li>
+                </ul>
+                <div class="achievements-box">
+                    <p class="achievements-title">Key Achievements</p>
+                    <ul class="achievements-list">
+                        <li>Received recognition for outstanding performance & dedication as HSE Supervisor</li>
+                        <li>Promoted to EHS Manager role</li>
+                        <li>Translated EHSS policies to Chinese, German & Kiswahili for multinational workforce</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Earlier Roles -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Earlier Career</h3>
+                        <p class="exp-company">Farm Concern International | Soon & Seel Construction | Lafarge Holcim
+                        </p>
+                    </div>
+                    <span class="exp-date">2015 - 2017</span>
+                </div>
+                <ul class="exp-roles-list">
+                    <li>Assistant Researcher & Data Analyst - Farm Concern International (Oct 2016 - Nov 2017)</li>
+                    <li>EHS Officer - Soon & Seel Construction Company (Jun 2015 - Aug 2016)</li>
+                    <li>Health & Safety Intern - Lafarge Holcim Mombasa (Apr 2015 - Aug 2015)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🎓</span>
+                Education
+            </h2>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <h4>Master of Science in Occupational Health and Safety</h4>
+                    <p>Kenyatta University</p>
+                    <span class="edu-date">Jan 2020 - Present</span>
+                </div>
+                <div class="edu-card">
+                    <h4>Bachelor of Science in Environmental Science</h4>
+                    <p>Pwani University</p>
+                    <span class="edu-date">Sept 2016</span>
+                </div>
+                <div class="edu-card">
+                    <h4>NEBOSH International General Certificate</h4>
+                    <p>Varel Engineering</p>
+                    <span class="edu-date">Feb 2019</span>
+                </div>
+                <div class="edu-card">
+                    <h4>Environmental Impact Assessment</h4>
+                    <p>Kenya Institute of Management</p>
+                    <span class="edu-date">Nov 2017</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Certifications -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">📜</span>
+                Professional Certifications
+            </h2>
+            <div class="cert-list">
+                <div class="cert-item">
+                    <div class="cert-icon">🌱</div>
+                    <div class="cert-details">
+                        <h5>GRI Sustainability Reporting</h5>
+                        <p>Impact Africa • Aug 2025</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">⚖️</div>
+                    <div class="cert-details">
+                        <h5>Gender Equality - How Business Can Accelerate Change</h5>
+                        <p>UN Global Compact • May 2025</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🌍</div>
+                    <div class="cert-details">
+                        <h5>Carbon Accounting for Renewable Energy Projects</h5>
+                        <p>GHG Management Institute • Feb 2024</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">📊</div>
+                    <div class="cert-details">
+                        <h5>Corporate ESG & Sustainability</h5>
+                        <p>Udemy • Nov 2022</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🍽️</div>
+                    <div class="cert-details">
+                        <h5>FSSC 22000 Food Safety</h5>
+                        <p>Top Quest Consultants • Oct 2022</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">✅</div>
+                    <div class="cert-details">
+                        <h5>ISO 9001:2015 Internal Auditing</h5>
+                        <p>Bureau Veritas • June 2021</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🔬</div>
+                    <div class="cert-details">
+                        <h5>Industrial Hygiene</h5>
+                        <p>Auditors Guild • July 2020</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🏗️</div>
+                    <div class="cert-details">
+                        <h5>Work at Height & Rigging/Lifting</h5>
+                        <p>Kaileys Consortium • 2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Affiliations -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🤝</span>
+                Professional Affiliations
+            </h2>
+            <div class="affiliations-grid">
+                <div class="affiliation-item">
+                    <span>Executive Member - Workplace Safety Professional Association of Kenya</span>
+                </div>
+                <div class="affiliation-item">
+                    <span>Member - IOSH (Institution of Occupational Safety and Health)</span>
+                </div>
+                <div class="affiliation-item">
+                    <span>AfriSAFE Country Representative - Kenya</span>
+                </div>
+                <div class="affiliation-item">
+                    <span>NEMA Associate Expert (Expert No: 11426)</span>
+                </div>
+                <div class="affiliation-item">
+                    <span>Member - GHG Management Institute</span>
+                </div>
+                <div class="affiliation-item">
+                    <span>Member - Sustainability Champions Network</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultancy & Volunteer Work -->
+        <section class="section-card">
+            <h2 class="section-title">
+                <span class="section-icon">🌟</span>
+                Consultancy & Advisory Roles
+            </h2>
+            <div class="cert-list">
+                <div class="cert-item">
+                    <div class="cert-icon">🌐</div>
+                    <div class="cert-details">
+                        <h5>IOSH - OSH Advocacy & Emerging Markets Support</h5>
+                        <p>East Africa IOSH Consultant • April 2023 - Present</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">📋</div>
+                    <div class="cert-details">
+                        <h5>Compliance Management Professionals Africa</h5>
+                        <p>Member • Sept 2021 - Present</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">⚡</div>
+                    <div class="cert-details">
+                        <h5>Kaileys Consortium Limited</h5>
+                        <p>Projects OSH, Environment & Quality Advisor • Jan - Mar 2020</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🔥</div>
+                    <div class="cert-details">
+                        <h5>SYDEV Experts Limited</h5>
+                        <p>Occupational Safety & Fire Safety Trainings • Nov 2018 - July 2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="profile-footer">
+            <p class="footer-tagline">"Driving Sustainable Impact Across Africa & Beyond"</p>
+            <p>📧 kananananis@gmail.com &nbsp;|&nbsp; 📱 +254 717 116 325</p>
+            <p style="margin-top: 20px; font-size: 0.8rem;">To save as PDF: Press Ctrl + P (Windows) or Cmd + P (Mac),
+                then select "Save as PDF"</p>
+        </footer>
+    </div>
+</body>
+
+</html>
